@@ -162,8 +162,16 @@ nav a:hover{
 
 .coca-cola-img{
     width: 120px;
+    display: block;
+    margin: 0 auto;
 }
 
 .sprite-img{
     width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+
+.aperitivos h2{
+    text-align: center;
 }
