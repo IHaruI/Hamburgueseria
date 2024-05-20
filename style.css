@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&family=Oswald:wght@200..700&display=swap');
+
+body{
+    margin: 0;
+    /* background: url(img/fondo.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover; */
+
+    /* background-color: black; */
+    background-color: #E9D331;
+}
+
+header{
+    display: flex;
+    min-height: 100px;
+    background-image: url(img/cuadritos.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: "Oswald", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none; /* Saca el subrallado de los "a" */
+    color: white;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo-img{
+    height: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav a{
+    font-weight: 600; /* Negritas */
+    padding-right: 60px;
+}
+
+nav a:hover{
+    color: black;
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+.fondo{
+    width: 100%;
+}
+
+.hamburguesa-1{
+    display: flex;
+}
+
+.hamburguesa-1 img{
+    height: 700px;
+    width: 700px;
+    border-radius: 350px;
+    border: 15px solid white;
+    margin-left: 100px;
+}
+
+.hamburguesa-1 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburguesa-1 h2{
+    margin-top: 120px;
+    font-size: 90px;
+    font-family: "Big Shoulders Stencil Text", sans-serif;
+    margin-bottom: 40px;
+}
+
+.hamburguesa-1 div p{
+    font-size: 30px;
+    width: 60%;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+}
+
+.hamburguesa-2{
+    display: flex;
+    background-image: url(img/fondo-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hamburguesa-2 img{
+    height: 700px;
+    width: 700px;
+    border-radius: 350px;
+    border: 15px solid white;
+    margin-right: 100px;
+}
+
+.hamburguesa-2 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburguesa-2 h2{
+    margin-top: 150px;
+    font-size: 90px;
+    font-family: "Big Shoulders Stencil Text", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.hamburguesa-2 div p{
+    font-size: 30px;
+    width: 60%;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+    color: white;
+}
+
+.aperitivos-extras{
+    display: flex;
+    justify-content: center;
+}
+
+.extras{
+    width: 400px;
+}
+
+.aperitivos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.papas-fritas-img{
+    width: 400px;
+}
+
+.papas-cheddar.img{
+    width: 400px;
+}
+
+.coca-cola-img{
+    width: 120px;
+}
+
+.sprite-img{
+    width: 120px;
+}
