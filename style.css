@@ -239,7 +239,7 @@ nav a:hover{
 }
 
 .red-social a{
-    display: inline-block;
+    display: inline-block; /* Que se pongan en linea pero que mantengan su propiedad block */
     text-decoration: none;
     width: 45px;
     height: 45px;
