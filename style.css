@@ -3,14 +3,11 @@
 
 body{
     margin: 0;
-    /* background: url(img/fondo.png);
-    height: 100px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover; */
-
-    /* background-color: black; */
     background-color: #E9D331;
+}
+
+html{
+    scroll-behavior: smooth; /* Desplazamiento suabe */
 }
 
 header{
@@ -24,6 +21,7 @@ header{
     align-items: center;
     padding: 10px;
     font-family: "Oswald", sans-serif;
+    /*position: sticky;  Mantiene el elemento en su posicion original hasta que alcanza un punto especifico en la pagina, en momento en el cual se vuelve fijo. */
     position: fixed;
     top: 0;
     left: 0;
@@ -52,126 +50,406 @@ nav a{
 }
 
 nav a:hover{
-    color: black;
-}
-
-@media screen and (max-width: 700px) {
-    header{
-        flex-direction: column;
-    }
-    nav{
-        padding: 10px 0px;
-    }
+    color: #E9D331;
 }
 
 .fondo{
     width: 100%;
+    margin-top: 100px;
 }
 
-.hamburguesa-1{
-    display: flex;
-}
-
-.hamburguesa-1 img{
-    height: 700px;
-    width: 700px;
-    border-radius: 350px;
-    border: 15px solid white;
-    margin-left: 100px;
-}
-
-.hamburguesa-1 div{
+.productos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    padding: 20px;
 }
 
-.hamburguesa-1 h2{
+/* align-items: stretch; Estira los elementos hijos para que ocupen todo el alto disponible */
+.hamburguesa-1, .hamburguesa-2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
+    width: 100%;
+    margin: 30px;
+    box-sizing: border-box;
+}
+
+.H-1706, .contenido-1, .H-Betos, .contenido-2{
+    flex: 1; /* Asigna la misma proporción a ambos contenedores */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.H-1706 img, .H-Betos img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 15px solid white;
+}
+
+.contenido-1, .contenido-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contenido-1 h2, .contenido-2 h2{
     margin-top: 120px;
     font-size: 90px;
     font-family: "Big Shoulders Stencil Text", sans-serif;
     margin-bottom: 40px;
 }
 
-.hamburguesa-1 div p{
+.contenido-1 p, .contenido-2 p{
     font-size: 30px;
     width: 60%;
     font-weight: 500;
     font-family: "Oswald", sans-serif;
-}
-
-.hamburguesa-2{
-    display: flex;
-    background-image: url(img/fondo-2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hamburguesa-2 img{
-    height: 700px;
-    width: 700px;
-    border-radius: 350px;
-    border: 15px solid white;
-    margin-right: 100px;
-}
-
-.hamburguesa-2 div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hamburguesa-2 h2{
-    margin-top: 150px;
-    font-size: 90px;
-    font-family: "Big Shoulders Stencil Text", sans-serif;
-    margin-bottom: 40px;
-    color: white;
-}
-
-.hamburguesa-2 div p{
-    font-size: 30px;
-    width: 60%;
-    font-weight: 500;
-    font-family: "Oswald", sans-serif;
-    color: white;
 }
 
 .aperitivos-extras{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-.extras{
-    width: 400px;
+.aperitivos-extras img{
+    width: 25%;
+    height: auto;
 }
 
 .aperitivos{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.aperitivos-1, .aperitivos-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.papas-fritas-img{
-    width: 400px;
-}
-
-.papas-cheddar.img{
-    width: 400px;
-}
-
-.coca-cola-img{
-    width: 120px;
-    display: block;
-    margin: 0 auto;
-}
-
-.sprite-img{
-    width: 120px;
-    display: block;
-    margin: 0 auto;
-}
-
-.aperitivos h2{
     text-align: center;
+    margin: 10px;
+}
+
+.papas-fritas img, .papas-cheddar img, .coca-cola img, .sprite img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.aperitivos-1 h2, .aperitivos-2 h2{
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+.sucursal{
+    text-align: center;
+}
+
+.sucursal img{
+    width: 44%;
+    height: auto;
+}
+
+.sucursales{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.ubicaciones, .mapas{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.ubicacion-1, .ubicacion-2, .ubicacion-3, .mapa-1, .mapa-2, .mapa-3{
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.ubicacion-1 h3, .ubicacion-2 h3, .ubicacion-3 h3{
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+}
+
+.ubicacion-1 p, .ubicacion-2 p, .ubicacion-3 p{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+}
+
+.mapa-1 iframe, .mapa-2 iframe, .mapa-3 iframe{
+    width: 80%;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.fin-presentacion{
+    background-color: black;
+    background-image: url(img/meta.png);
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+    height: 50px;
+}
+
+.pie-de-pagina{
+    width: 100%;
+    background-color: black;
+}
+
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.caja{
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+}
+
+.caja h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.caja p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d200d;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.red-social a:hover{
+    color: aqua;
+}
+
+.grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.grupo-2 small{
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+        padding-left: 60px;
+    }
+
+    .nav-link{
+        font-size: 12px;
+    }
+
+    .hamburguesa-1, .hamburguesa-2{
+        flex-direction: row;
+    }
+
+    .H-1706, .contenido-1, .H-Betos, .contenido-2{
+        width: auto;
+        height: auto;
+    }
+
+    .H-1706 img, .H-Betos img{
+        border: 10px solid white;
+    }
+
+    .contenido-1 h2, .contenido-2 h2{
+        margin-top: 20px;
+        font-size: 40px;
+        font-family: "Big Shoulders Stencil Text", sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .contenido-1 p, .contenido-2 p{
+        font-size: 20px;
+        width: 80%;
+        font-weight: 400;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .aperitivos{
+        flex-direction: row;
+    }
+
+    .papas-fritas img, .papas-cheddar img, .coca-cola img, .sprite img{
+        max-height: 200px;
+    }
+
+    .aperitivos-1 h2, .aperitivos-2 h2{
+        font-size: 20px;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .sucursales{
+        margin: 10px;
+    }
+
+    .ubicaciones, .mapas{
+        margin: 0px;
+    }
+
+    .ubicacion-1 h3, .ubicacion-2 h3, .ubicacion-3 h3{
+        font-size: 20px;
+    }
+
+    .ubicacion-1 p, .ubicacion-2 p, .ubicacion-3 p{
+        font-size: 15px;
+    }
+
+    .mapa-1 iframe, .mapa-2 iframe, .mapa-3 iframe{
+        width: 100%;
+        height: 150px;
+    }
+
+    .fin-presentacion{
+        height: 30px;
+    }
+
+    .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .caja h2{
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    nav{
+        padding: 10px 0px;
+        padding-left: 20px;
+    }
+
+    .nav-link{
+        font-size: 10px;
+        padding-right: 40px;
+    }
+
+    .hamburguesa-1, .hamburguesa-2{
+        margin: 8px;
+    }
+
+    .H-1706, .contenido-1, .H-Betos, .contenido-2{
+        width: auto;
+        height: auto;
+    }
+
+    .H-1706 img, .H-Betos img{
+        border: 10px solid white;
+    }
+
+    .contenido-1 h2, .contenido-2 h2{
+        margin-top: 16px;
+        font-size: 20px;
+        font-family: "Big Shoulders Stencil Text", sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .contenido-1 p, .contenido-2 p{
+        font-size: 10px;
+        width: 80%;
+        font-weight: 400;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .papas-fritas img, .papas-cheddar img, .coca-cola img, .sprite img{
+        max-height: 150px;
+    }
+
+    .aperitivos-1 h2, .aperitivos-2 h2{
+        font-size: 10px;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .sucursales{
+        margin: 10px;
+    }
+
+    .ubicaciones,.mapas{
+        margin: 0;
+    }
+
+    .ubicacion-1 h3, .ubicacion-2 h3, .ubicacion-3 h3{
+        font-size: 15px;
+    }
+
+    .ubicacion-1 p, .ubicacion-2 p, .ubicacion-3 p{
+        font-size: 13px;
+    }
+
+    .mapa-1 iframe, .mapa-2 iframe, .mapa-3 iframe{
+        width: 100%;
+        height: 80px;
+        border: 1px solid black;
+    }
+
+    .fin-presentacion{
+        height: 15px;
+    }
+
+    .grupo-1{
+        width: 70%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding: 15px 0px;
+    }
+
+    .caja img{
+        width: 130px;
+    }
+
+    .caja h2{
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .caja p{
+        font-size: 12px;
+    }
+
+    .grupo-2 small{
+        font-size: 10px;
+    }
 }
