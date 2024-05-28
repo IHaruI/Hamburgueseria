@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&display=swap');
+
+body{
+    margin: 0;
+    background-color: #E9D331;
+}
+
+html{
+    scroll-behavior: smooth; /* Desplazamiento suabe */
+}
+
+header{
+    display: flex;
+    min-height: 100px;
+    background-image: url(../img/fondo-header.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: "Oswald", sans-serif;
+    /*position: sticky;  Mantiene el elemento en su posicion original hasta que alcanza un punto especifico en la pagina, en momento en el cual se vuelve fijo. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none; /* Saca el subrallado de los "a" */
+    color: white;
+}
+
+.container-burger1706{
+    display: grid;
+    height: 110px;
+    margin-left: 20px;
+    grid-template-rows: 18% 90%;
+}
+
+.container-burger1706 h2{
+    order: 2;
+    text-align: end;
+    font-family: "Barlow", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    margin: 0;
+}
+
+.container-burger1706 h4{
+    order: 1;
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    text-align: end;
+    color: #E9D331;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo-img{
+    height: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav a{
+    font-weight: 600; /* Negritas */
+    padding-right: 60px;
+}
+
+nav a:hover{
+    color: #E9D331;
+}
+
+.cuerpo{
+    margin: 80px auto;
+    width: 90%;
+    margin-top: 200px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 20em 1fr;
+}
+
+.imagen{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 150px;
+}
+
+.titulo{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(../img/contenedorTitulo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.descripcion{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: left;
+    font-size: 20px;
+}
+
+.agregado-carrito{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agregado-carrito a{
+    color: black;
+    font-size: 25px;
+    border-radius: 100px;
+    background-color: #ff8a00;
+    padding: 25px 10px;
+}
+
+.otros-productos{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.linea{
+    margin-top: 10px;
+    width: 100%;
+    border-top: 6px solid #fff;
+}
+
+.listado{
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.pie-de-pagina{
+    width: 100%;
+    background-color: black;
+}
+
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.caja{
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+}
+
+.caja img{
+    width: 150px;
+}
+
+.caja h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.caja p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.red-social a{
+    display: inline-block; /* Que se pongan en linea pero que mantengan su propiedad block */
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d200d;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.red-social a:hover{
+    color: aqua;
+}
+
+.grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.grupo-2 small{
+    font-size: 15px;
+}

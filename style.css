@@ -253,6 +253,10 @@ nav a:hover{
     place-items: center; /* Centra horizontal y verticalmente */
 }
 
+.caja img{
+    width: 150px;
+}
+
 .caja h2{
     color: #fff;
     margin-bottom: 25px;
@@ -396,6 +400,10 @@ nav a:hover{
         padding: 35px 0px;
     }
 
+    .caja img{
+        width: 100px;
+    }
+
     .caja h2{
         margin-bottom: 15px;
         font-size: 15px;
@@ -502,7 +510,7 @@ nav a:hover{
     }
 
     .caja img{
-        width: 130px;
+        width: 80px;
     }
 
     .caja h2{
