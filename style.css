@@ -28,6 +28,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 
 a{
@@ -113,11 +114,52 @@ nav a:hover{
     box-sizing: border-box;
 }
 
+.H-1706, .H-Betos{
+    position: relative;
+}
+
 .H-1706 img, .H-Betos img{
     max-width: 70%;
     height: auto;
     border-radius: 50%;
     border: 15px solid white;
+    transition: transform 1s ease; /* Agrega una rotacion suave para la rotacion */
+    backface-visibility: hidden; 
+}
+
+.H-1706:hover img, .H-Betos:hover img{
+    transform: rotateY(180deg);
+}
+
+.H-1706 p, .H-Betos p, .H-1706 a, .H-Betos a{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.H-1706:hover p, .H-Betos:hover p, .H-1706:hover a, .H-Betos:hover a{
+    opacity: 1;
+}
+
+.H-1706 p, .H-Betos p{
+    color: #000;
+    font-size: 50px;
+    top: 30%;
+    font-family: "Oswald", sans-serif;
+}
+
+.H-1706 a, .H-Betos a{
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    bottom: 20%;
+    padding: 10px;
+    border-radius: 40px;
+    font-family: "Oswald", sans-serif;
 }
 
 .contenido-1, .contenido-2{
@@ -344,6 +386,19 @@ nav a:hover{
         border: 10px solid white;;
     }
 
+    .H-1706 p, .H-Betos p{
+        font-size: 25px;
+        top: 25%;
+    }
+    
+    .H-1706 a, .H-Betos a{
+        font-size: 12px;
+        bottom: 16%;
+        padding: 8px;
+        border-radius: 40px;
+        font-family: "Oswald", sans-serif;
+    }
+
     .contenido-1 h2, .contenido-2 h2{
         margin-top: 14px;
         font-size: 30px;
@@ -459,6 +514,19 @@ nav a:hover{
 
     .H-1706 img, .H-Betos img{
         border: 6px solid white;
+    }
+
+    .H-1706 p, .H-Betos p{
+        font-size: 15px;
+        top: 20%;
+    }
+    
+    .H-1706 a, .H-Betos a{
+        font-size: 8px;
+        bottom: 14%;
+        padding: 5px;
+        border-radius: 40px;
+        font-family: "Oswald", sans-serif;
     }
 
     .contenido-1 h2, .contenido-2 h2{
