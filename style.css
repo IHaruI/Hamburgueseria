@@ -12,6 +12,7 @@ html{
     scroll-behavior: smooth; /* Desplazamiento suabe */
 }
 
+/* ############ <!-- Encabezado --> ############### */
 header{
     display: flex;
     min-height: 100px;
@@ -23,12 +24,11 @@ header{
     align-items: center;
     padding: 10px;
     font-family: "Oswald", sans-serif;
-    /*position: sticky;  Mantiene el elemento en su posicion original hasta que alcanza un punto especifico en la pagina, en momento en el cual se vuelve fijo. */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 10; /* Asegura que el header este por encima de todo */
 }
 
 a{
@@ -40,11 +40,11 @@ a{
     display: grid;
     height: 110px;
     margin-left: 20px;
-    grid-template-rows: 18% 90%;
+    grid-template-rows: 18% 90%; /* Define el tamaño y la distribucion de las filas en un grid (1era fila ocupara el 18% de la altura y la 2da el 90%)*/
 }
 
 .container-burger1706 h2{
-    order: 2;
+    order: 2; /* Controla el orden de aparicion de elementos dentro de un contenedor grid o flexbox (Este saldra segundo) */
     text-align: end;
     font-family: "Barlow", sans-serif;
     font-weight: 900;
@@ -53,7 +53,7 @@ a{
 }
 
 .container-burger1706 h4{
-    order: 1;
+    order: 1; /* Controla el orden de aparicion de elementos dentro de un contenedor grid o flexbox (Este saldra primero) */
     font-family: "Kalam", cursive;
     font-weight: 700;
     text-align: end;
@@ -80,6 +80,7 @@ nav a:hover{
     color: #E9D331;
 }
 
+/* ############### <!-- Imagen de fondo --> ############### */
 .fondo{
     width: 100%;
     margin-top: 100px;
@@ -100,7 +101,7 @@ nav a:hover{
     justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
     width: 100%;
     margin: 30px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Controla como se calcula el tamaño total de un elemento */
 }
 
 .H-1706, .contenido-1, .H-Betos, .contenido-2{
@@ -115,7 +116,7 @@ nav a:hover{
 }
 
 .H-1706, .H-Betos{
-    position: relative;
+    position: relative; /* Ajusta la posicion en relacion con su posicion orignial */
 }
 
 .H-1706 img, .H-Betos img{
@@ -124,7 +125,7 @@ nav a:hover{
     border-radius: 50%;
     border: 15px solid white;
     transition: transform 1s ease; /* Agrega una rotacion suave para la rotacion */
-    backface-visibility: hidden; 
+    backface-visibility: hidden; /* Oculta el lado trasero del elemento cuando este rota */
 }
 
 .H-1706:hover img, .H-Betos:hover img{
@@ -132,10 +133,10 @@ nav a:hover{
 }
 
 .H-1706 p, .H-Betos p, .H-1706 a, .H-Betos a{
-    position: absolute;
+    position: absolute; /* Posiciona en relacion con un ancestro posicionado */
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
+    transform: translate(-50%, -50%); /* Despalza el elemento hacia arriba y hacia la izquierda en relacion de su posicion original */
+    font-weight: bold; /* Hace que el texto sea mas grueso y negrita */
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -185,6 +186,7 @@ nav a:hover{
     font-family: "Oswald", sans-serif;
 }
 
+/* ############### <!-- Extras --> ############### */
 .aperitivos-extras{
     text-align: center;
 }
@@ -194,6 +196,8 @@ nav a:hover{
     height: auto;
 }
 
+
+/* ############### <!-- Aperitivos Extras --> ############### */
 .aperitivos{
     display: flex;
     justify-content: space-between;
@@ -212,7 +216,7 @@ nav a:hover{
 .papas-fritas img, .papas-cheddar img, .coca-cola img, .sprite img{
     max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: cover; /* La imagen se redimenciona para mantener su relacion de aspecto mientras llena el cuadro de contenido completo del elemento */
     max-height: 400px;
 }
 
@@ -223,6 +227,7 @@ nav a:hover{
     font-family: "Oswald", sans-serif;
 }
 
+/* ############### <!-- Sucursal --> ############### */
 .sucursal{
     text-align: center;
 }
@@ -232,6 +237,7 @@ nav a:hover{
     height: auto;
 }
 
+/* ############### <!-- Sucursales --> ############### */
 .sucursales{
     display: flex;
     flex-direction: column;
@@ -266,6 +272,7 @@ nav a:hover{
     border: 2px solid black;
 }
 
+/* ############### <!-- Final de Presentacion --> ############### */
 .fin-presentacion{
     background-color: black;
     background-image: url(img/meta.png);
@@ -275,6 +282,7 @@ nav a:hover{
     height: 50px;
 }
 
+/* ############### <!-- Pie de pagina --> ############### */
 .pie-de-pagina{
     width: 100%;
     background-color: black;
@@ -311,7 +319,7 @@ nav a:hover{
 }
 
 .red-social a{
-    display: flex; /* Que se pongan en linea pero que mantengan su propiedad block */
+    display: flex;
     text-decoration: none;
     width: 200px;
     height: 45px;
@@ -340,6 +348,7 @@ nav a:hover{
     font-size: 15px;
 }
 
+/* ############### <!-- Media Query (768px) --> ############### */
 @media screen and (max-width: 768px){
     header{
         flex-direction: column;
@@ -473,6 +482,7 @@ nav a:hover{
     }
 }
 
+/* ############### <!-- Media Query (480px) --> ############### */
 @media screen and (max-width: 480px){
     nav{
         padding: 10px 0px;
