@@ -2,20 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 body{
-    margin: 0;
     background-color: #E9D331;
+    font-family: "Bebas Neue";
+    margin: 0px;
 }
 
 html{
     scroll-behavior: smooth; /* Desplazamiento suabe */
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.espaciado{
+    height: 150px;
+}
+
 header{
     display: flex;
     min-height: 100px;
-    background-image: url(../img/fondo-header.png);
+    background-image: url(../../img/fondo-header.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -23,16 +40,11 @@ header{
     align-items: center;
     padding: 10px;
     font-family: "Oswald", sans-serif;
-    /*position: sticky;  Mantiene el elemento en su posicion original hasta que alcanza un punto especifico en la pagina, en momento en el cual se vuelve fijo. */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-}
-
-a{
-    text-decoration: none; /* Saca el subrallado de los "a" */
-    color: white;
+    z-index: 10;
 }
 
 .container-burger1706{
@@ -92,109 +104,66 @@ nav a:hover{
     color: #E9D331;
 }
 
-.cuerpo{
-    margin: 80px auto;
-    width: 90%;
-    margin-top: 200px;
-    height: 500px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 20em 1fr;
+/*encabezado y barra de navegacion
+
+.logo{
+    width: 140px;
+    height: 140px;
+    position: relative;
 }
 
-.imagen{
-    grid-column: 1/2;
-    grid-row: 1/4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logoEscrito{
+    position: relative;
+    top: -25px;
 }
 
-.imagen img{
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 150px;
-}
-
-.titulo{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    background-image: url(../img/contenedorTitulo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-}
-
-.titulo h2{
-    font-family: "Big Shoulders Stencil Text", sans-serif;
-}
-
-.descripcion{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    text-align: left;
-    font-size: 20px;
-    margin-left: 20px;
-}
-
-.descripcion h2, p{
-    font-family: "Oswald", sans-serif;
-}
-
-.agregado-carrito{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.agregado-carrito a{
-    color: black;
-    font-size: 20px;
-    border-radius: 100px;
-    background-color: #ff8a00;
-    padding: 25px 10px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 500;
-}
-
-.otros-productos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
-}
-
-.subtitulo h2{
-    font-family: "Oswald", sans-serif;
-}
-
-.linea{
-    margin-top: 10px;
+.barraNavegacion{
+    background-image: url("../img/cuadritos.png");
+    /*background-size: cover;
+    height: 160px;
     width: 100%;
-    border-top: 6px solid #fff;
+    position: relative;
+    top: -10px;
+    align-content: center;
+}
+.navegacion{
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(5, auto);
+    width: 60%;
+    position: relative;
+    left: 450px;
+    top: 70px;
+    
 }
 
-.listado{
-    width: 100% !important;
-    height: 400px !important;
+.navegacion a{
+    margin-left: 100px;
+    font-size: 1.5rem;
+    color: aliceblue;
 }
 
-/* ############### <!-- Final de Presentacion --> ############### */
+.navegacion a:hover{
+    color: #E9D331;
+}
+
+.navegacion a.active{
+    color: #E9D331;
+}
+
+*************************************************/
+
 .fin-presentacion{
     background-color: black;
-    background-image: url(../img/meta.png);
+    background-image: url(../../img/meta.png);
     background-repeat: repeat;
     background-size: contain;
     width: 100%;
     height: 50px;
 }
 
-/* ############### <!-- Pie de pagina --> ############### */
+/*pie de pagina*/
+
 .pie-de-pagina{
     width: 100%;
     background-color: black;
@@ -213,6 +182,7 @@ nav a:hover{
 .caja{
     display: grid;
     place-items: center; /* Centra horizontal y verticalmente */
+    font-family: "Oswald", sans-serif;
 }
 
 .caja img{
@@ -269,24 +239,10 @@ nav a:hover{
 
 .grupo-2 small{
     font-size: 15px;
+    font-family: "Oswald", sans-serif;
 }
 
 /* ############### <!-- Media Query (1010px) --> ############### */
-@media screen and (max-width: 1100px) {
-    .titulo{
-        font-size: 20px;
-    }
-
-    .descripcion{
-        font-size: 16px;
-    }
-
-    .agregado-carrito a{
-        font-size: 17px;
-        padding: 18px 10px;
-    }
-}
-
 @media screen and (max-width: 1010px){
     header{
         flex-direction: column;
@@ -299,15 +255,14 @@ nav a:hover{
     }
 }
 
-/* ############### <!-- Media Query (768px) --> ############### */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     .logo-img{
         height: 80px;
         margin-left: 0px;
     }
 
     .container-burger1706{
-        height: 100px;
+        height: 80px;
         grid-template-rows: 30% 90%;
     }
 
@@ -327,31 +282,6 @@ nav a:hover{
 
     .nav-link{
         font-size: 12px;
-    }
-
-    .titulo{
-        font-size: 18px;
-    }
-
-    .descripcion{
-        font-size: 15px;
-    }
-
-    .agregado-carrito a{
-        font-size: 16px;
-        padding: 17px 10px;
-    }
-
-    .titulo{
-        background-size: 270px;
-    }
-
-    .subtitulo h2{
-        font-size: 22px;
-    }
-
-    .linea{
-        border-top: 5px solid #fff;
     }
 
     .fin-presentacion{
@@ -395,7 +325,7 @@ nav a:hover{
         top: 84%;
         left: 0;
         display: none;
-        background-image: url(../img/fondo-header.png);
+        background-image: url(../../img/fondo-header.png);
         background-repeat: no-repeat;
         background-position: center bottom;
         background-size: cover;
@@ -436,7 +366,7 @@ nav a:hover{
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px){
     .logo-img{
         height: 60px;
         margin-left: 0px;
@@ -459,76 +389,6 @@ nav a:hover{
     .menu-icon{
         width: 25px;
     }
-
-    .cuerpo{
-        margin-top: 100px;
-        height: auto;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 20rem 100px 10rem 1fr;
-    }
-
-    .imagen{
-        grid-column: 1/3;
-        grid-row: 1/2;
-    }
-
-    .imagen img{
-        max-width: 75%;
-        max-height: 75%;
-    }
-
-    .titulo{
-        grid-column: 1/3;
-        grid-row: 2/3;
-    }
-
-    .descripcion{
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-
-    .agregado-carrito{
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-
-    .titulo{
-        background-size: 220px;
-        font-size: 13px;
-    }
-
-    .descripcion{
-        font-size: 10px;
-    }
-
-    .agregado-carrito a{
-        font-size: 12px;
-        padding: 12px 5px;
-    }
-
-    .otros-productos{
-        margin: 10px;
-    }
-
-    .subtitulo h2{
-        font-size: 16px;
-    }
-
-    .linea{
-        border-top: 3px solid #fff;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
 
     .fin-presentacion{
         height: 15px;
