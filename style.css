@@ -1,0 +1,929 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Barlow:ital,wght@0,100..900;1,100..900&family=Kalam:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #e9d331;
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suabe */
+}
+
+header {
+  font-family: "Oswald", sans-serif;
+}
+
+/* =========================
+   ENCABEZADO Y NAVEGACION
+=========================*/
+
+.navbar-custom {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #e9d331 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-burger1706 {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.container-burger1706 h2 {
+  order: 2;
+  text-align: end;
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  margin: 0;
+}
+
+.container-burger1706 h4 {
+  order: 1;
+  text-align: end;
+  font-family: "Kalam", cursive;
+  color: #e9d331;
+  margin-bottom: -20px;
+}
+
+.logo-img {
+  height: 100px;
+  margin: 0 20px;
+}
+
+/* =========================
+   IMAGEN DE FONDO 
+=========================*/
+
+.imagen-fondo {
+  position: relative;
+  background-image: url("img/fondo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+}
+
+.imagen-fondo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  color: white;
+}
+
+.hero-subtitle {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-family: "Oswald";
+  line-height: 0.95;
+  font-weight: 700;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 25px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: 0.35s;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   PRODUCTOS DESTACADOS
+=========================*/
+
+#destacados {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.titulo-destacados {
+  font-family: "Oswald";
+  font-size: 3.4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.titulo-destacados::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80px;
+  height: 5px;
+  background: #e9d331;
+  border-radius: 20px;
+}
+
+.producto-card {
+  background: #1c1c1c;
+  color: white;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: 0.35s;
+  border: 2px solid transparent;
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+  border-color: #e9d331;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.35);
+}
+
+.producto-card img {
+  width: 85%;
+  height: 220px;
+  transition: 0.45s;
+  object-fit: contain;
+  margin: auto;
+  padding: 15px 15px 0;
+}
+
+.producto-card:hover img {
+  transform: scale(1.08) rotate(0deg);
+}
+
+.producto-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+}
+
+.producto-card h3 {
+  font-family: "Oswald";
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.producto-card p {
+  color: #cfcfcf;
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 75px;
+}
+
+.producto-card h4 {
+  color: #ffd54a;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 18px 0;
+}
+
+.producto-card .btn {
+  width: 100%;
+  border-radius: 40px;
+  font-weight: 700;
+  padding: 12px;
+  transition: 0.3s;
+}
+
+.producto-card .btn:hover {
+  transform: scale(1.03);
+}
+
+/*=========================
+      GALERIA
+=========================*/
+
+.galeria-titulo {
+  text-align: center;
+  margin-top: 60px;
+  padding: 10px 10px 2px 10px;
+  margin-bottom: 30px;
+  background: #1c1c1c;
+}
+
+.galeria-titulo h2 {
+  font-family: "Oswald";
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.galeria-titulo p {
+  color: #e9d331;
+  font-size: 1.1rem;
+}
+
+.galeria-productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1450px;
+  margin: auto;
+  padding: 90px 10px;
+}
+
+.galeriaSwiper {
+  flex: 1;
+  max-width: 1200px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 22px;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: 0.35s;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+/*=========================
+      BOTONES
+=========================*/
+
+.galeria-btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #e9d331;
+  background: #1c1c1c;
+  color: #e9d331;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.35s;
+  flex: 0 0 60px;
+}
+
+.galeria-btn:hover {
+  background: #e9d331;
+  color: #111;
+  transform: scale(1.1);
+}
+
+.galeria-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+        SUCURSALES
+========================= */
+
+.sucursales {
+  padding: 90px 5%;
+  background: #111;
+}
+
+.sucursal-titulo {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sucursal-titulo h2 {
+  font-family: "Oswald";
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.sucursal-titulo p {
+  color: #e9d331;
+  font-size: 1.2rem;
+}
+
+.sucursales-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.sucursal-card {
+  background: #1c1c1c;
+  border-radius: 25px;
+  padding: 20px;
+  max-width: 420px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: 0.35s;
+}
+
+.sucursal-card:hover {
+  transform: translateY(-10px);
+  border-color: #e9d331;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sucursal-card h3 {
+  font-family: "Oswald";
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.sucursal-card iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 15px;
+  border: none;
+  margin: 20px 0;
+}
+
+.sucursal-card p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* =========================
+      SEPARADOR FINAL
+========================= */
+
+.fin-presentacion {
+  background-color: black;
+  background-image: url(img/meta.png);
+  background-repeat: repeat;
+  background-size: contain;
+  width: 100%;
+  height: 55px;
+}
+
+/* =========================
+          FOOTER
+========================= */
+
+.pie-de-pagina {
+  background: #0b0b0b;
+  width: 100%;
+}
+
+.grupo-1 {
+  max-width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 70px 60px;
+}
+
+.caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.caja img {
+  width: 170px;
+  transition: 0.3s;
+}
+
+.caja img:hover {
+  transform: scale(1.08);
+}
+
+.caja h2 {
+  font-family: "Oswald";
+  color: #e9d331;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.caja p {
+  color: #ddd;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+#escribinos-link {
+  margin-top: 15px;
+  width: 200px;
+  padding: 12px;
+  border-radius: 30px;
+  background: #e9d331;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#escribinos-link:hover {
+  background: white;
+  transform: translateY(-4px);
+}
+
+.red-social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-btn {
+  width: 220px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 30px;
+  border: 1px solid #e9d331;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  background: #e9d331;
+  color: #111;
+  transform: translateX(8px);
+}
+
+.grupo-2 {
+  background: #050505;
+  border-top: 1px solid #222;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.grupo-2 b {
+  color: #e9d331;
+}
+
+/* =====================================
+        TABLET
+        992px
+===================================== */
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    border: 2px solid #e9d331;
+  }
+
+  .navbar-collapse {
+    background: #0b0b0b;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    border-radius: 15px;
+  }
+
+  /* NUEVO: Quitamos el padding derecho de 60px que hereda el logo */
+  .navbar-brand {
+    padding-right: 0;
+  }
+
+  /* NUEVO: Forzamos que el contenedor ocupe el 100% del ancho */
+  .navbar-custom .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 12px !important;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
+
+  .container-burger1706 h2 {
+    font-size: 35px;
+  }
+
+  .container-burger1706 h4 {
+    font-size: 14px;
+  }
+
+  .imagen-fondo {
+    min-height: 100vh;
+
+    background-position: center;
+  }
+
+  /* evita el corte amarillo */
+
+  .imagen-fondo::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 120px;
+
+    background: linear-gradient(transparent, #e9d331);
+  }
+
+  .hero-text {
+    margin-top: 50px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  #destacados {
+    padding-top: 50px;
+  }
+
+  .producto-card {
+    max-width: 350px;
+
+    margin: auto;
+  }
+
+  .producto-card img {
+    height: 220px;
+  }
+
+  .galeria-productos {
+    gap: 10px;
+    padding: 60px 15px;
+  }
+
+  .galeriaSwiper {
+    max-width: 650px;
+  }
+
+  .galeria-btn {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+  }
+
+  .swiper-slide img {
+    max-width: 280px;
+  }
+
+  .sucursales {
+    padding: 60px 30px;
+  }
+
+  .sucursales-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sucursal-card {
+    max-width: 500px;
+
+    margin: auto;
+  }
+}
+
+/* =====================================
+        CELULAR GRANDE
+        768px
+===================================== */
+
+@media (max-width: 768px) {
+  /* NUEVO: Acercamos más a los bordes */
+  .navbar-custom .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logo-img {
+    height: 55px;
+    margin-left: 5px;
+  }
+
+  .container-burger1706 h2 {
+    font-size: 25px;
+  }
+
+  .container-burger1706 h4 {
+    font-size: 11px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons .btn {
+    width: 200px;
+
+    padding: 12px;
+  }
+
+  .titulo-destacados {
+    font-size: 2rem;
+  }
+
+  .producto-card {
+    width: 90%;
+  }
+
+  .producto-card img {
+    height: 170px;
+  }
+
+  .producto-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .producto-card h4 {
+    font-size: 1.4rem;
+  }
+
+  .producto-card p {
+    min-height: auto;
+  }
+
+  .galeria-productos {
+    gap: 8px;
+    padding: 40px 10px;
+  }
+
+  .galeriaSwiper {
+    max-width: 260px;
+  }
+
+  .galeria-titulo h2 {
+    font-size: 2rem;
+  }
+
+  .galeria-titulo p {
+    font-size: 0.9rem;
+  }
+
+  .swiper-slide img {
+    max-width: 280px;
+  }
+
+  .galeria-btn {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .sucursal-titulo h2 {
+    font-size: 2rem;
+  }
+
+  .sucursal-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .sucursal-card iframe {
+    height: 180px;
+  }
+
+  .grupo-1 {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .caja p {
+    max-width: 90%;
+  }
+}
+
+/* =====================================
+        CELULAR PEQUEÑO
+        480px
+===================================== */
+
+@media (max-width: 480px) {
+  /* NUEVO: Pegamos casi al borde total */
+  .navbar-custom .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* NUEVO: Hacemos el botón de las rayas un poco más ajustado */
+  .navbar-toggler {
+    padding: 4px 8px;
+  }
+
+  /* MODIFICADO: Quitamos los márgenes por completo */
+  .logo-img {
+    height: 55px;
+    margin-left: 5px;
+  }
+
+  .container-burger1706 h2 {
+    font-size: 25px;
+  }
+
+  .container-burger1706 h4 {
+    font-size: 9px;
+  }
+
+  .imagen-fondo {
+    min-height: 100vh;
+  }
+
+  /* evita completamente el corte */
+
+  .imagen-fondo::after {
+    height: 180px;
+  }
+
+  .hero-text {
+    margin-top: 0px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.75rem;
+  }
+
+  .hero-buttons .btn {
+    width: 180px;
+
+    font-size: 0.85rem;
+  }
+
+  .titulo-destacados {
+    font-size: 1.7rem;
+  }
+
+  .producto-card {
+    border-radius: 20px;
+  }
+
+  .producto-card img {
+    height: 160px;
+  }
+
+  .producto-card .card-body {
+    padding: 15px;
+  }
+
+  .producto-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .producto-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .galeria-productos {
+    padding: 40px 10px;
+    flex-wrap: nowrap; /* Evita que los botones colapsen */
+  }
+
+  .galeria-titulo h2 {
+    font-size: 1.55rem;
+  }
+
+  /* NUEVO: Permite que el slider se encoja restando el espacio de los botones */
+  .galeriaSwiper {
+    width: calc(100% - 90px);
+    max-width: 260px;
+  }
+
+  /* MODIFICADO: Hacemos la imagen responsive y forzamos su centrado */
+  .swiper-slide img {
+    max-width: 200px;
+    margin: 0 auto; /* Esto es clave para forzar el centrado horizontal */
+    display: block;
+  }
+
+  .galeria-btn {
+    width: 35px;
+    height: 35px;
+    flex: 0 0 25px;
+  }
+
+  .sucursales {
+    padding: 40px 15px;
+  }
+
+  .sucursal-card {
+    border-radius: 18px;
+  }
+
+  .sucursal-card iframe {
+    height: 170px;
+  }
+
+  .sucursal-card p {
+    font-size: 0.9rem;
+  }
+}
