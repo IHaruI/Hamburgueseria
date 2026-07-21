@@ -71,7 +71,7 @@ a {
 }
 
 /* =========================
-        HERO
+          HERO
 ========================= */
 
 .contacto-hero {
@@ -83,13 +83,10 @@ a {
 
   background-size: cover;
   background-position: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   padding: 140px 20px 70px;
 }
 
@@ -100,38 +97,28 @@ a {
 
 .contacto-texto span {
   display: inline-block;
-
   padding: 8px 22px;
-
   border-radius: 30px;
-
   background: rgba(255, 255, 255, 0.15);
-
   backdrop-filter: blur(8px);
-
   font-weight: 600;
-
   margin-bottom: 20px;
 }
 
 .contacto-texto h1 {
   font-family: "Oswald";
-
   font-size: clamp(2.8rem, 6vw, 5rem);
-
   margin-bottom: 20px;
-
   line-height: 0.95;
 }
 
 .contacto-texto p {
   font-size: 1.1rem;
-
   color: #f5f5f5;
 }
 
 /* =========================
-      FORMULARIO
+        FORMULARIO
 ========================= */
 
 .contacto-section {
@@ -140,47 +127,32 @@ a {
 
 .contacto-card {
   max-width: 750px;
-
   margin: auto;
-
   background: #1c1c1c;
-
   padding: 45px;
-
   border-radius: 30px;
-
   border: 2px solid transparent;
-
   transition: 0.35s;
-
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
 .contacto-card:hover {
   transform: translateY(-8px);
-
   border-color: #e9d331;
 }
 
 .form-label {
   color: white;
-
   font-weight: 600;
-
   margin-bottom: 10px;
 }
 
 .form-control {
   background: #2b2b2b;
-
   border: 2px solid transparent;
-
   color: white;
-
   border-radius: 15px;
-
   padding: 14px;
-
   transition: 0.3s;
 }
 
@@ -190,31 +162,22 @@ a {
 
 .form-control:focus {
   background: #2b2b2b;
-
   color: white;
-
   border-color: #e9d331;
-
   box-shadow: none;
 }
 
 textarea.form-control {
   resize: none;
-
   min-height: 180px;
 }
 
 .btn-enviar {
   width: 100%;
-
   padding: 15px;
-
   border-radius: 50px;
-
   font-weight: 700;
-
   font-size: 1.05rem;
-
   transition: 0.35s;
 }
 
@@ -307,20 +270,13 @@ textarea.form-control {
 .social-btn {
   width: 220px;
   height: 45px;
-
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   gap: 12px;
-
   border-radius: 30px;
-
   border: 1px solid #e9d331;
-
   color: white;
-
   transition: 0.3s;
 }
 
@@ -343,7 +299,7 @@ textarea.form-control {
 }
 
 /* =========================
-        TABLET
+          TABLET
 ========================= */
 
 @media (max-width: 992px) {
@@ -374,7 +330,7 @@ textarea.form-control {
 }
 
 /* =========================
-        CELULAR
+          CELULAR
 ========================= */
 
 @media (max-width: 768px) {
@@ -392,7 +348,6 @@ textarea.form-control {
 
   .contacto-card {
     padding: 28px 22px;
-
     border-radius: 22px;
   }
 
